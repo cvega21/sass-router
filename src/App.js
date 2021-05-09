@@ -15,26 +15,26 @@ const App = () => {
       <div className="App">
         <nav className="NavBar">
           <ul className="LinkContainer">
-            <li className="LinkButton">
+            <li className="LinkButtonContainer">
               <Link to="/reactapp">
-                <button>React</button>
+                <button className="LinkButton">React</button>
               </Link>
             </li>
-            <li className="LinkButton">
+            <li className="LinkButtonContainer">
               <Link to="/sass">
-                <button>Sass</button>
+                <button className="LinkButton">Sass</button>
               </Link>
             </li>
-            <li className="LinkButton">
+            <li className="LinkButtonContainer">
               <Link to="/node">
-                <button>Node</button>
+                <button className="LinkButton">Node</button>
               </Link>
             </li>
           </ul>
         </nav>      
-        <button>
+        {/* <button>
           night mode
-        </button>  
+        </button>   */}
         
         <Switch>
           <Route path="/reactapp">

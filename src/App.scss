@@ -1,5 +1,37 @@
-$primary-color: 3626A7;
+$primary-color: #3626A7;
+
+.App {
+  text-align: center;
+}
+
+.NavBar {
+  display: flex;
+  justify-content: center;
+}
+
+.LinkContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40vw;
+  padding: 0px;
+}
+
+.LinkButtonContainer {
+  list-style: none;
+}
 
 .LinkButton {
-  list-style: none;
+  background-color: transparent;
+  border: solid 2px $primary-color;
+  color: $primary-color;
+  width: 60px;
+  height: 50px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+img {
+  height: 250px;
+  width: auto;
 }
