@@ -1,24 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import ReactApp from './components/ReactApp';
+import Sass from './components/Sass';
+import Node from './components/Node';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <nav className="NavBar">
+          <ul className="LinkContainer">
+            <li className="LinkButton">
+              <Link to="/reactapp">
+                <button>React</button>
+              </Link>
+            </li>
+            <li className="LinkButton">
+              <Link to="/sass">
+                <button>Sass</button>
+              </Link>
+            </li>
+            <li className="LinkButton">
+              <Link to="/node">
+                <button>Node</button>
+              </Link>
+            </li>
+          </ul>
+        </nav>      
+        <button>
+          night mode
+        </button>  
+        
+        <Switch>
+          <Route path="/reactapp">
+            <ReactApp/>
+          </Route>
+          <Route path="/sass">
+            <Sass/>
+          </Route>
+          <Route path="/node">
+            <Node/>
+          </Route>
+        </Switch>
+
+      </div>
+    </Router>
   );
 }
 
