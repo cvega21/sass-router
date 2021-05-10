@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;700&display=swap');
+
 $primary-color: #3626A7;
 
 .App {
   text-align: center;
+  font-family: 'Fira Sans';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .NavBar {
@@ -34,4 +40,10 @@ $primary-color: #3626A7;
 img {
   height: 250px;
   width: auto;
+}
+
+.LogoComponent {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
 }
