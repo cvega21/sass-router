@@ -1,4 +1,4 @@
-import './App.scss';
+import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,9 +32,10 @@ const App = () => {
             </li>
           </ul>
         </nav>      
-        {/* <button>
-          night mode
-        </button>   */}
+        <label class="switch">
+          <input type="checkbox"/>
+          <span class="slider round"></span>
+        </label>  
         
         <Switch>
           <Route path="/reactapp">
