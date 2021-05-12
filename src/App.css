@@ -1,27 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;700&display=swap');
 
-.LightTheme {
-  --primary-color: #3626A7;
-  --secondary-color: #be6868;
+html, body {
+  margin: 0;
+  padding: 0;
+}  
+
+:root {
+  --primary-color: #3f28ee;
+  --secondary-color: #F5F1ED;
   --accent-color: #AEA4BF;
   --font-color: #0A0908;
+  --toggle-color: #FFB11A;
 }
 
 .DarkTheme {
-  --primary-color: #5043b6;
+  --primary-color: #FFB11A;
   --secondary-color: #0A0908;
-  --accent-color: #f1f1f1;
-  --font-color: #f1f1f1;
+  --accent-color: #f7f7f7;
+  --font-color: #F5F1ED;
+  --toggle-color: #3f28ee;
 }
 
 .App {
   text-align: center;
   font-family: 'Fira Sans';
-  color: var(--secondary-color);
+  color: var(--font-color);
   background: var(--secondary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .NavBar {
@@ -41,10 +50,11 @@
 }
 
 .LinkButton {
-  background-color: #247BA0;
+  background-color: var(--primary-color);
   border: solid 2px;
-  /* border-color: var(--secondary-color);  */
-  color: #f1f1f1;
+  border-radius: 7.5px;
+  /* border-color: var(--accent-color); */
+  color: var(--secondary-color); 
   width: 60px;
   height: 50px;
 }
@@ -87,7 +97,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #FFB11A;
+  background-color: var(--toggle-color);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -105,11 +115,11 @@ img {
 }
 
 input:checked + .slider {
-  background-color: rgb(34, 20, 136);
+  background-color: var(--toggle-color);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 5px var(--accent-color);
 }
 
 input:checked + .slider:before {

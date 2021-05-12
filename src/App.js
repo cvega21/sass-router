@@ -10,6 +10,10 @@ import Sass from './components/Sass';
 import Node from './components/Node';
 
 const App = () => {
+  const changeTheme = e => {
+    document.body.classList.toggle("DarkTheme");
+  }
+  
   return (
     <Router>
       <div className="App">
@@ -33,7 +37,7 @@ const App = () => {
           </ul>
         </nav>      
         <label class="switch">
-          <input type="checkbox"/>
+          <input type="checkbox" onClick={changeTheme}/>
           <span class="slider round"></span>
         </label>  
         
