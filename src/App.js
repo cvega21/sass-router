@@ -8,6 +8,7 @@ import {
 import ReactApp from './components/ReactApp';
 import Sass from './components/Sass';
 import Node from './components/Node';
+import LogosBanner from './components/LogosBanner';
 
 const App = () => {
   const changeTheme = e => {
@@ -34,6 +35,11 @@ const App = () => {
                 <button className="LinkButton">Node</button>
               </Link>
             </li>
+            <li className="LinkButtonContainer">
+              <Link to="/logos">
+                <button className="LinkButton">Logos</button>
+              </Link>
+            </li>
           </ul>
         </nav>      
         <label class="switch">
@@ -50,6 +56,9 @@ const App = () => {
           </Route>
           <Route path="/node">
             <Node/>
+          </Route>
+          <Route path="/logos">
+            <LogosBanner/>
           </Route>
         </Switch>
 
