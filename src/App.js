@@ -8,7 +8,8 @@ import {
 import ReactApp from './components/ReactApp';
 import Sass from './components/Sass';
 import Node from './components/Node';
-import LogosBanner from './components/LogosBanner';
+import LogosBanner from './components/LogosBannerNew';
+import Grid from './components/Grid';
 
 const App = () => {
   const changeTheme = e => {
@@ -40,6 +41,11 @@ const App = () => {
                 <button className="LinkButton">Logos</button>
               </Link>
             </li>
+            <li className="LinkButtonContainer">
+              <Link to="/grid">
+                <button className="LinkButton">Grid</button>
+              </Link>
+            </li>
           </ul>
         </nav>      
         <label class="switch">
@@ -59,6 +65,9 @@ const App = () => {
           </Route>
           <Route path="/logos">
             <LogosBanner/>
+          </Route>
+          <Route path="/grid">
+            <Grid/>
           </Route>
         </Switch>
 

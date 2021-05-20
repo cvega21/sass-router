@@ -1,5 +1,4 @@
 import React from 'react'
-import LogoComponent from './LogoComponent'
 import bash from '../assets/bash.svg';
 import css3 from '../assets/css3.png';
 import heroku from '../assets/heroku.png';
@@ -60,6 +59,7 @@ const LogosBanner = () => {
             </div>
             <div className="fade-background fade-background-right"></div>
           </div>
+          <br></br>
         </div>
     </div>
   )
